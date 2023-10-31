@@ -1,0 +1,15 @@
+[ 2023-10-31 22:09:30,740 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 22:09:30,740 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 22:09:34,475 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:34] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 22:09:34,498 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 22:09:38,162 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:38] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 22:09:38,186 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 22:09:47,751 ] 24 root - INFO - connection completed
+[ 2023-10-31 22:09:47,751 ] 38 root - INFO - connection setup sucess
+[ 2023-10-31 22:09:51,710 ] 40 root - INFO - inserting of data is completed
+[ 2023-10-31 22:09:52,126 ] 14 root - INFO - prediction for new data has started
+[ 2023-10-31 22:09:52,143 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:52] "POST /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 22:09:52,176 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 22:09:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

@@ -1,0 +1,85 @@
+[ 2023-10-27 13:38:48,943 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-27 13:38:48,943 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-27 13:38:57,090 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:38:57] "GET / HTTP/1.1" 200 -
+[ 2023-10-27 13:38:57,133 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:38:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-27 13:38:59,897 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:38:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2023-10-27 13:39:01,606 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:39:01] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-27 13:39:01,624 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:39:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-27 13:39:18,529 ] 21 root - INFO - connection completed
+[ 2023-10-27 13:39:19,747 ] 37 root - INFO - there may be some error in mongo connection
+[ 2023-10-27 13:39:19,747 ] 78 root - INFO - there may be some problem in get as data frame
+[ 2023-10-27 13:39:19,754 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 35, in Insertion
+    collection.insert_one(data)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\collection.py", line 671, in insert_one
+    self._insert_one(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\collection.py", line 611, in _insert_one
+    self.__database.client._retryable_write(acknowledged, _insert_command, session)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\mongo_client.py", line 1568, in _retryable_write
+    return self._retry_with_session(retryable, func, s, None)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\mongo_client.py", line 1413, in _retry_with_session
+    return self._retry_internal(retryable, func, session, bulk)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\_csot.py", line 108, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\mongo_client.py", line 1451, in _retry_internal
+    with self._checkout(server, session) as conn:
+  File "E:\Working\Ineuron_intership\venv\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\mongo_client.py", line 1246, in _checkout
+    with server.checkout(handler=err_handler) as conn:
+  File "E:\Working\Ineuron_intership\venv\lib\contextlib.py", line 113, in __enter__
+    return next(self.gen)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\pool.py", line 1598, in checkout
+    conn = self._get_conn(handler=handler)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\pool.py", line 1714, in _get_conn
+    conn = self.connect(handler=handler)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\pool.py", line 1568, in connect
+    conn.authenticate()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\pool.py", line 1042, in authenticate
+    auth.authenticate(creds, self, reauthenticate=reauthenticate)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\auth.py", line 616, in authenticate
+    auth_func(credentials, conn)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\auth.py", line 521, in _authenticate_default
+    return _authenticate_scram(credentials, conn, "SCRAM-SHA-1")
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\auth.py", line 289, in _authenticate_scram
+    res = conn.command(source, cmd)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\helpers.py", line 315, in inner
+    return func(*args, **kwargs)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\pool.py", line 932, in command
+    return command(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\network.py", line 191, in command
+    helpers._check_command_response(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\helpers.py", line 223, in _check_command_response
+    raise OperationFailure(errmsg, code, response, max_wire_version)
+pymongo.errors.OperationFailure: bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\prediction_pipeline.py", line 73, in get_as_dataframe
+    self.storage.Insertion(custom_data_input_dict)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 38, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [35] error message [bad auth : authentication failed, full error: {'ok': 0, 'errmsg': 'bad auth : authentication failed', 'code': 8000, 'codeName': 'AtlasError'}]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 30, in predict_datapoint
+    final_new_data = data.get_as_dataframe()
+  File "E:\Working\Ineuron_intership\src\pipeline\prediction_pipeline.py", line 79, in get_as_dataframe
+    raise CustomData(e,sys)
+TypeError: __init__() missing 8 required positional arguments: 'education_num', 'occupation', 'race', 'sex', 'capital_gain', 'capital_loss', 'hours_per_week', and 'country'
+[ 2023-10-27 13:39:19,850 ] 96 werkzeug - INFO - 127.0.0.1 - - [27/Oct/2023 13:39:19] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -

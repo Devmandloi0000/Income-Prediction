@@ -1,0 +1,87 @@
+[ 2023-10-31 21:51:03,115 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 21:51:03,118 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 21:51:08,627 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:51:08,627 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:51:12,422 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:51:12,532 ] 46 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:51:12,532 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 44, in Insertion
+    new_csv=pd.DataFrame(x,index=True)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 481, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 117, in arrays_to_mgr
+    index = ensure_index(index)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 7128, in ensure_index
+    return Index(index_like, copy=copy)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 516, in __new__
+    raise cls._raise_scalar_data_error(data)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 5066, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, True was passed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 47, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [44] error message [Index(...) must be called with a collection of some kind, True was passed]
+[ 2023-10-31 21:51:12,598 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:12] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+[ 2023-10-31 21:51:17,563 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:17] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:51:17,596 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:51:20,448 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:20] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:51:20,472 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:51:33,704 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:51:33,705 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:51:35,354 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:51:35,573 ] 46 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:51:35,573 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 44, in Insertion
+    new_csv=pd.DataFrame(x,index=True)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 481, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 117, in arrays_to_mgr
+    index = ensure_index(index)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 7128, in ensure_index
+    return Index(index_like, copy=copy)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 516, in __new__
+    raise cls._raise_scalar_data_error(data)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\indexes\base.py", line 5066, in _raise_scalar_data_error
+    raise TypeError(
+TypeError: Index(...) must be called with a collection of some kind, True was passed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 47, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [44] error message [Index(...) must be called with a collection of some kind, True was passed]
+[ 2023-10-31 21:51:35,573 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:51:35] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -

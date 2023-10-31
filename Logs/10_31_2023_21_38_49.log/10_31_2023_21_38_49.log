@@ -1,0 +1,94 @@
+[ 2023-10-31 21:38:50,912 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 21:38:50,912 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 21:38:57,720 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:38:57,720 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:39:00,075 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:39:00,251 ] 45 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:39:00,251 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 43, in Insertion
+    print(x[1:])
+TypeError: unhashable type: 'slice'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 46, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [43] error message [unhashable type: 'slice']
+[ 2023-10-31 21:39:00,259 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:00] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+[ 2023-10-31 21:39:02,966 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:02] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:39:02,981 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:39:05,631 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:05] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:39:05,653 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:39:20,730 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:39:20,730 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:39:23,155 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:39:23,407 ] 45 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:39:23,407 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 43, in Insertion
+    print(x[1:])
+TypeError: unhashable type: 'slice'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 46, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [43] error message [unhashable type: 'slice']
+[ 2023-10-31 21:39:23,407 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:23] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+[ 2023-10-31 21:39:30,030 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:30] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:39:30,056 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:39:35,446 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:35] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:39:35,470 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:39:46,985 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:39:46,985 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:39:49,386 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:39:49,660 ] 45 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:39:49,660 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 43, in Insertion
+    print(x[1:])
+TypeError: unhashable type: 'slice'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 46, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [43] error message [unhashable type: 'slice']
+[ 2023-10-31 21:39:49,670 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:39:49] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -

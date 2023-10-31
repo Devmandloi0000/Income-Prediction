@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="result-box">
+        <h2>Result:</h2>
+        {% if final_result == '<=50K' %}
+            <p>The result is Negative.</p>
+            <p>As per above information income will be Below than 50K<p>
+            
+        {% elif final_result == '>50K' %}
+            <p>The result is positive.</p>
+            <p>As per above information income will be above than 50K<p>
+          
+        {% else %}
+            <p>The result is unknown.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

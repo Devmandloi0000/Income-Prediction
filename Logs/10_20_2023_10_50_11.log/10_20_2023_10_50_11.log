@@ -1,0 +1,39 @@
+[ 2023-10-20 10:50:21,231 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-20 10:50:21,231 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-20 10:50:35,027 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:50:35] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 10:50:35,041 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:50:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 10:51:00,703 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:00] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 10:51:00,722 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 10:51:01,715 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:01] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 10:51:01,748 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 10:51:38,402 ] 14 root - INFO - prediction for new data has started
+[ 2023-10-20 10:51:38,740 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:38] "POST /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 10:51:38,759 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 10:51:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:37,980 ] 14 root - INFO - prediction for new data has started
+[ 2023-10-20 11:41:37,993 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:37] "POST /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 11:41:38,016 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:42,225 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:42] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:42,243 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:42,825 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:42] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:42,844 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:42] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:43,016 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:43,032 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:43,183 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:43,195 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:43,594 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:43,609 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:43,849 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "GET / HTTP/1.1" 200 -
+[ 2023-10-20 11:41:43,861 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:41:44,980 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:44] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 11:41:45,000 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:41:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:42:38,511 ] 14 root - INFO - prediction for new data has started
+[ 2023-10-20 11:42:38,526 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:42:38] "POST /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 11:42:38,546 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:42:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:44:09,989 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:44:09] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 11:44:10,012 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:44:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-20 11:45:01,296 ] 14 root - INFO - prediction for new data has started
+[ 2023-10-20 11:45:01,308 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:45:01] "POST /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-20 11:45:01,327 ] 96 werkzeug - INFO - 127.0.0.1 - - [20/Oct/2023 11:45:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

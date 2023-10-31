@@ -1,0 +1,38 @@
+[ 2023-10-31 21:58:15,500 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 21:58:15,500 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 21:58:31,792 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:58:31] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:58:31,801 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:58:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:58:36,753 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:58:36] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:58:37,273 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:58:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:58:47,856 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:58:47,856 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:58:50,701 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:58:50,913 ] 47 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:58:50,913 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 44, in Insertion
+    new_csv=pd.DataFrame(j,columns=['id','age','workclass','education_number','occupation','race','sex','capital_gain','capital_loss','hours_per_week','country'])
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\frame.py", line 817, in __init__
+    raise ValueError("DataFrame constructor not properly called!")
+ValueError: DataFrame constructor not properly called!
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 48, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [44] error message [DataFrame constructor not properly called!]
+[ 2023-10-31 21:58:50,921 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:58:50] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -

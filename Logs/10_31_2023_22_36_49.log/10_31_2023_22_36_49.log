@@ -1,0 +1,29 @@
+[ 2023-10-31 22:36:49,790 ] 22 root - INFO - File stoage house
+[ 2023-10-31 22:36:49,790 ] 26 root - INFO - Data Ingestion process has started
+[ 2023-10-31 22:36:49,852 ] 30 root - INFO - data initiated
+[ 2023-10-31 22:36:50,207 ] 53 root - INFO - Data Ingestion completed
+[ 2023-10-31 22:36:50,210 ] 126 root - INFO - Data Transforamtion primary process has started
+[ 2023-10-31 22:36:50,285 ] 68 root - INFO - Data Transforamtion process has started
+[ 2023-10-31 22:36:50,285 ] 70 root - INFO - Data Transformation secondary initiated
+[ 2023-10-31 22:36:50,408 ] 68 root - INFO - Data Transforamtion process has started
+[ 2023-10-31 22:36:50,409 ] 70 root - INFO - Data Transformation secondary initiated
+[ 2023-10-31 22:36:50,464 ] 24 root - INFO - data preprocessed has started
+[ 2023-10-31 22:36:50,464 ] 59 root - INFO - data preprocessed has completed
+[ 2023-10-31 22:36:50,574 ] 172 root - INFO - data saved inside the preprocessed object
+[ 2023-10-31 22:36:50,574 ] 173 root - INFO - preproceeing finished
+[ 2023-10-31 22:36:50,574 ] 23 root - INFO - model trainer primary initiated
+[ 2023-10-31 22:37:08,265 ] 37 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:37:08,265 ] 38 root - INFO - MODEL ACCURACY 
+ {SVC(C=1): 0.8315217391304348}
+[ 2023-10-31 22:37:08,265 ] 39 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:37:08,265 ] 46 root - INFO - finally model trainined succesfully 
+[ 2023-10-31 22:37:08,265 ] 56 root - INFO - model trainer secondary initiated
+[ 2023-10-31 22:39:17,701 ] 68 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:39:17,701 ] 69 root - INFO - MODEL ACCURACY 
+                     model  acc_score  train_score  best_para   best_sc
+0      LogisticRegression   0.820000     0.820662        NaN  0.821127
+1  DecisionTreeClassifier   0.829783     0.862301        NaN  0.825820
+2  RandomForestClassifier   0.843370     0.867320        NaN  0.844642
+
+[ 2023-10-31 22:39:17,701 ] 70 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:39:17,701 ] 73 root - INFO - finally model trainined succesfully 

@@ -1,0 +1,20 @@
+[ 2023-10-31 22:25:52,412 ] 20 root - INFO - File stoage house
+[ 2023-10-31 22:25:52,412 ] 24 root - INFO - Data Ingestion process has started
+[ 2023-10-31 22:25:52,622 ] 28 root - INFO - data initiated
+[ 2023-10-31 22:25:53,071 ] 51 root - INFO - Data Ingestion completed
+[ 2023-10-31 22:25:53,086 ] 124 root - INFO - Data Transforamtion primary process has started
+[ 2023-10-31 22:25:53,155 ] 66 root - INFO - Data Transforamtion process has started
+[ 2023-10-31 22:25:53,155 ] 68 root - INFO - Data Transformation secondary initiated
+[ 2023-10-31 22:25:53,453 ] 66 root - INFO - Data Transforamtion process has started
+[ 2023-10-31 22:25:53,453 ] 68 root - INFO - Data Transformation secondary initiated
+[ 2023-10-31 22:25:53,531 ] 22 root - INFO - data preprocessed has started
+[ 2023-10-31 22:25:53,531 ] 57 root - INFO - data preprocessed has completed
+[ 2023-10-31 22:25:53,641 ] 170 root - INFO - data saved inside the preprocessed object
+[ 2023-10-31 22:25:53,641 ] 171 root - INFO - preproceeing finished
+[ 2023-10-31 22:25:53,641 ] 21 root - INFO - model trainer primary initiated
+[ 2023-10-31 22:26:12,924 ] 35 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:26:12,955 ] 36 root - INFO - MODEL ACCURACY 
+ {SVC(C=1): 0.8315217391304348}
+[ 2023-10-31 22:26:12,955 ] 37 root - INFO - ======================================================================================================================================================
+[ 2023-10-31 22:26:12,970 ] 44 root - INFO - finally model trainined succesfully 
+[ 2023-10-31 22:26:12,970 ] 54 root - INFO - model trainer secondary initiated

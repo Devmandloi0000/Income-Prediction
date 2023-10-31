@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to the Income Prediction Form</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the Income Prediction Form</h1>
+    <p>This is a simple form to predict income based on various features.</p>
+
+    <div class="form">
+        <form method="GET" action="/predict_datapoint">
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+   
+        <!-- Rest of your form elements -->
+    </form>
+</body>
+</html>
+

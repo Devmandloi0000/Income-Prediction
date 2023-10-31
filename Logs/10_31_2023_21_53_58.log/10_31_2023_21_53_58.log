@@ -1,0 +1,46 @@
+[ 2023-10-31 21:54:00,011 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 21:54:00,011 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 21:54:02,666 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:54:02] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:54:02,674 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:54:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:54:06,017 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:54:06] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:54:06,041 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:54:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:54:15,937 ] 23 root - INFO - connection completed
+[ 2023-10-31 21:54:15,937 ] 37 root - INFO - connection setup sucess
+[ 2023-10-31 21:54:20,371 ] 39 root - INFO - inserting of data is completed
+[ 2023-10-31 21:54:20,652 ] 47 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:54:20,652 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 44, in Insertion
+    new_csv=pd.DataFrame(x,columns=x.keys())
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\frame.py", line 709, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 436, in dict_to_mgr
+    index = _extract_index(arrays[~missing])
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pandas\core\internals\construction.py", line 645, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 48, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [44] error message [If using all scalar values, you must pass an index]
+[ 2023-10-31 21:54:20,652 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:54:20] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
+[ 2023-10-31 21:55:53,910 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:55:53] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:55:53,919 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:55:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:55:56,969 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:55:56] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:55:56,989 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:55:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

@@ -1,0 +1,68 @@
+[ 2023-10-31 21:29:46,831 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-10-31 21:29:46,831 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-10-31 21:29:57,114 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:29:57] "GET / HTTP/1.1" 200 -
+[ 2023-10-31 21:29:57,168 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:29:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:30:00,498 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:30:00] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-10-31 21:30:00,522 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:30:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-10-31 21:30:36,363 ] 30 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:30:36,363 ] 41 root - INFO - there may be some error in mongo connection
+[ 2023-10-31 21:30:36,363 ] 825 app - ERROR - Exception on /predict_datapoint [POST]
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\srv_resolver.py", line 97, in _resolve_uri
+    results = _resolve(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\srv_resolver.py", line 45, in _resolve
+    return resolver.resolve(*args, **kwargs)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\dns\resolver.py", line 1565, in resolve
+    return get_default_resolver().resolve(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\dns\resolver.py", line 1321, in resolve
+    timeout = self._compute_timeout(start, lifetime, resolution.errors)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\dns\resolver.py", line 1075, in _compute_timeout
+    raise LifetimeTimeout(timeout=duration, errors=errors)
+dns.resolver.LifetimeTimeout: The resolution lifetime expired after 21.244 seconds: Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 22, in Mongo_connection
+    client=MongoClient(url)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\mongo_client.py", line 766, in __init__
+    res = uri_parser.parse_uri(
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\uri_parser.py", line 556, in parse_uri
+    nodes = dns_resolver.get_hosts()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\srv_resolver.py", line 131, in get_hosts
+    _, nodes = self._get_srv_response_and_hosts(True)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\srv_resolver.py", line 111, in _get_srv_response_and_hosts
+    results = self._resolve_uri(encapsulate_errors)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\pymongo\srv_resolver.py", line 105, in _resolve_uri
+    raise ConfigurationError(str(exc))
+pymongo.errors.ConfigurationError: The resolution lifetime expired after 21.244 seconds: Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 36, in Insertion
+    collection=self.Mongo_connection()
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 31, in Mongo_connection
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [22] error message [The resolution lifetime expired after 21.244 seconds: Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 1455, in wsgi_app
+    response = self.full_dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 869, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 867, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "E:\Working\Ineuron_intership\venv\lib\site-packages\flask\app.py", line 852, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 45, in predict_datapoint
+    m.Insertion(new_data)
+  File "E:\Working\Ineuron_intership\src\pipeline\data_storage.py", line 42, in Insertion
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [36] error message [Error occured in python script name [E:\Working\Ineuron_intership\src\pipeline\data_storage.py] line number [22] error message [The resolution lifetime expired after 21.244 seconds: Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.; Server Do53:192.168.43.21@53 answered The DNS operation timed out.]]
+[ 2023-10-31 21:30:36,439 ] 96 werkzeug - INFO - 127.0.0.1 - - [31/Oct/2023 21:30:36] "[35m[1mPOST /predict_datapoint HTTP/1.1[0m" 500 -
