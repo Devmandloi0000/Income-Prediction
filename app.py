@@ -8,7 +8,7 @@ app = application
 @app.route('/')
 def Home_page():
     return render_template("index.html")
-
+  
 @app.route('/predict_datapoint',methods=['GET','POST'])   
 def predict_datapoint():
     if request.method == 'GET':
@@ -28,6 +28,15 @@ def predict_datapoint():
             country = str(request.form.get('country'))
         )
         
+        
+        
+        
+        final_new_data = data.get_as_dataframe()
+        predict_pipline = PredictionPipeline()
+        pred = predict_pipline.Predict(final_new_data)
+        
+        result = pred
+        
         #This only for make as dataframe to store data into mongo db
         new_data= {
             'age' : float(request.form.get('age')),
@@ -40,16 +49,10 @@ def predict_datapoint():
             "capital_loss" : float(request.form.get('capital_loss')),
             'hours_per_week' : float(request.form.get('hours_per_week')),
             'country' : str(request.form.get('country'))
+            
         }
         m = MGDB()
         m.Insertion(new_data)
-        
-        
-        final_new_data = data.get_as_dataframe()
-        predict_pipline = PredictionPipeline()
-        pred = predict_pipline.Predict(final_new_data)
-        
-        result = pred
         
         return render_template("results.html",final_result = result)
 

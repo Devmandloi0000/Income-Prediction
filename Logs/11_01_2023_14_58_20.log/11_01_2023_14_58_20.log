@@ -1,0 +1,9 @@
+[ 2023-11-01 14:58:27,361 ] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.159:5000
+[ 2023-11-01 14:58:27,361 ] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2023-11-01 14:58:33,571 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Nov/2023 14:58:33] "GET / HTTP/1.1" 200 -
+[ 2023-11-01 14:58:33,602 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Nov/2023 14:58:33] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+[ 2023-11-01 15:00:07,848 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Nov/2023 15:00:07] "GET /predict_datapoint HTTP/1.1" 200 -
+[ 2023-11-01 15:00:07,861 ] 96 werkzeug - INFO - 127.0.0.1 - - [01/Nov/2023 15:00:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

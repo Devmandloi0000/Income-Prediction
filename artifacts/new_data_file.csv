@@ -23,3 +23,9 @@ age,workclass,education_number,occupation,race,sex,capital_gain,capital_loss,hou
 80.0,State-gov,,Adm-clerical,White,Male,1200.0,123.0,36.0,Ecuador
 75.0,Federal-gov,,Protective-serv,White,Male,5400.0,450.0,45.0,United-States
 42.0,Federal-gov,,Adm-clerical,Asian-Pac-Islander,Female,12000.0,5000.0,50.0,England
+48.0,Federal-gov,,Prof-specialty,White,Male,10000.0,2500.0,50.0,United-States
+26.0,Private,,Machine-op-inspct,Other,Male,25000.0,450.0,56.0,India
+26.0,Private,,Machine-op-inspct,Other,Male,0.0,0.0,56.0,India
+25.0,Private,,Exec-managerial,White,Male,12000.0,15000.0,40.0,India
+25.0,State-gov,,Adm-clerical,White,Male,1200.0,5000.0,25.0,United-States
+50.0,State-gov,,Adm-clerical,White,Male,2400.0,0.0,40.0,United-States

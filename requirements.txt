@@ -7,5 +7,6 @@ scikit-learn
 ipykernel
 scipy
 pymongo
+mlflow
 
 -e .

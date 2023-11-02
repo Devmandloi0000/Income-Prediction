@@ -1,0 +1,4 @@
+[ 2023-11-02 23:09:09,010 ] 22 root - INFO - File stoage house
+[ 2023-11-02 23:09:09,011 ] 26 root - INFO - Data Ingestion process has started
+[ 2023-11-02 23:09:09,119 ] 30 root - INFO - data initiated
+[ 2023-11-02 23:09:09,375 ] 62 root - INFO - there may be some problem in data ingestion primary

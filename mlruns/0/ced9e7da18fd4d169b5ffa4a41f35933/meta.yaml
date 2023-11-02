@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/Working/Ineuron_intership/mlruns/0/ced9e7da18fd4d169b5ffa4a41f35933/artifacts
+end_time: 1698946926751
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ced9e7da18fd4d169b5ffa4a41f35933
+run_name: nosy-hound-348
+run_uuid: ced9e7da18fd4d169b5ffa4a41f35933
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1698946839168
+status: 3
+tags: []
+user_id: PCLP
