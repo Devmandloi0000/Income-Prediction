@@ -1,3 +1,2 @@
 # Income-Prediction-
-
-are used for predicting the income 
+## End To End Project On Income Prediction

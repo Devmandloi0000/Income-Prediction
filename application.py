@@ -29,8 +29,6 @@ def predict_datapoint():
         )
         
         
-        
-        
         final_new_data = data.get_as_dataframe()
         predict_pipline = PredictionPipeline()
         pred = predict_pipline.Predict(final_new_data)
