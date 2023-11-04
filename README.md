@@ -109,5 +109,14 @@ If you want to read you can visit this link
 
 > MLflow        :- https://mlflow.org/docs/0.2.0/index.html
 
+> Amazon AWS    :- https://aws.amazon.com/console/
+
+
+## Appendix
+
+> Link for App Documentation :
+
+> Link for Youtube video for description of the project :- 
+
 
 

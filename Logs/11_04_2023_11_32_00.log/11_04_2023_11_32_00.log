@@ -1,0 +1,47 @@
+[ 2023-11-04 11:32:07,363 ] 22 root - INFO - File stoage house
+[ 2023-11-04 11:32:07,363 ] 26 root - INFO - Data Ingestion process has started
+[ 2023-11-04 11:32:07,765 ] 30 root - INFO - data initiated
+[ 2023-11-04 11:32:08,247 ] 43 root - INFO - training shape:-        age          workclass  fnlwgt      education  education-num  ... capital-gain capital-loss hours-per-week         country  salary
+19749   34   Self-emp-not-inc   56460        HS-grad              9  ...            0         2179             12   United-States   <=50K
+1216    48   Self-emp-not-inc  243631   Some-college             10  ...         7688            0             40   United-States    >50K
+27962   23          State-gov   56402   Some-college             10  ...            0            0             30   United-States   <=50K
+23077   56          Local-gov  255406        HS-grad              9  ...            0            0             40   United-States   <=50K
+10180   17            Private  297246           11th              7  ...            0            0              9   United-States   <=50K
+...    ...                ...     ...            ...            ...  ...          ...          ...            ...             ...     ...
+29802   47            Private  359461      Bachelors             13  ...            0            0             40   United-States   <=50K
+5390    31            Private  147215           12th              8  ...            0            0             21   United-States   <=50K
+860     18            Private  216284           11th              7  ...            0            0             20   United-States   <=50K
+15795   50   Self-emp-not-inc   54261        HS-grad              9  ...            0            0             84   United-States   <=50K
+23654   34       Self-emp-inc  127651      Bachelors             13  ...            0            0             60   United-States   <=50K
+
+[22792 rows x 15 columns]
+[ 2023-11-04 11:32:08,275 ] 44 root - INFO - test shape:-        age          workclass  fnlwgt      education  education-num  ... capital-gain capital-loss hours-per-week         country  salary
+14160   27            Private  160178   Some-college             10  ...            0            0             38   United-States   <=50K
+27048   45          State-gov   50567        HS-grad              9  ...            0            0             40   United-States   <=50K
+28868   29            Private  185908      Bachelors             13  ...            0            0             55   United-States    >50K
+5667    30            Private  190040      Bachelors             13  ...            0            0             40   United-States   <=50K
+7827    29   Self-emp-not-inc  189346   Some-college             10  ...         2202            0             50   United-States   <=50K
+...    ...                ...     ...            ...            ...  ...          ...          ...            ...             ...     ...
+32476   35            Private   30673           12th              8  ...            0            0             84   United-States   <=50K
+21100   24            Private   51973      Bachelors             13  ...            0            0             20   United-States   <=50K
+27131   24            Private  442274        HS-grad              9  ...            0            0             40   United-States   <=50K
+25526   56            Private  178353   Some-college             10  ...            0            0             40   United-States    >50K
+21385   44            Private  198096      Bachelors             13  ...         7688            0             40   United-States    >50K
+
+[9769 rows x 15 columns]
+[ 2023-11-04 11:32:08,430 ] 55 root - INFO - Data Ingestion completed
+[ 2023-11-04 11:32:08,431 ] 139 root - INFO - Data Transforamtion primary process has started
+[ 2023-11-04 11:32:08,502 ] 81 root - INFO - Data Transforamtion process has started
+[ 2023-11-04 11:32:08,502 ] 83 root - INFO - Data Transformation secondary initiated
+[ 2023-11-04 11:32:08,663 ] 81 root - INFO - Data Transforamtion process has started
+[ 2023-11-04 11:32:08,663 ] 83 root - INFO - Data Transformation secondary initiated
+[ 2023-11-04 11:32:08,729 ] 35 root - INFO - data preprocessed has started
+[ 2023-11-04 11:32:08,729 ] 70 root - INFO - data preprocessed has completed
+[ 2023-11-04 11:32:08,877 ] 185 root - INFO - data saved inside the preprocessed object
+[ 2023-11-04 11:32:08,878 ] 186 root - INFO - preproceeing finished
+[ 2023-11-04 11:32:08,886 ] 23 root - INFO - model trainer primary initiated
+[ 2023-11-04 11:32:27,815 ] 37 root - INFO - ======================================================================================================================================================
+[ 2023-11-04 11:32:27,839 ] 38 root - INFO - MODEL ACCURACY 
+ {SVC(C=1): 0.8315217391304348}
+[ 2023-11-04 11:32:27,839 ] 39 root - INFO - ======================================================================================================================================================
+[ 2023-11-04 11:32:27,841 ] 46 root - INFO - finally model trainined succesfully 

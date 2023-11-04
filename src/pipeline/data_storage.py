@@ -46,7 +46,7 @@ class MGDB:
             # store new test data as csv
             if data_list:
                 data_dict_list = [x for x in data_list]
-                new_csv=pd.DataFrame(data_dict_list,columns=['age','workclass','education_number','occupation','race','sex','capital_gain','capital_loss','hours_per_week','country'])
+                new_csv=pd.DataFrame(data_dict_list,columns=['age','workclass','education_num','occupation','race','sex','capital_gain','capital_loss','hours_per_week','country'])
                 new_csv.to_csv(self.new_file_location.new_data_csv,index=False)
                 logging.info("new data is added to csv file")
             #print(new_csv)

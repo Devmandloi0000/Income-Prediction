@@ -12,4 +12,4 @@ if __name__ == "__main__":
     train_array,test_array,_=obj1.Data_Transformation_primary(X_train_path,X_test_path)
     obj3 = Model_Trainer()
     obj3.model_trainer_primary(train_array,test_array)
-    obj3.model_trainer_secondary(train_array,test_array)
+    #obj3.model_trainer_secondary(train_array,test_array)

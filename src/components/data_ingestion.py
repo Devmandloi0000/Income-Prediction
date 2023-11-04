@@ -40,6 +40,8 @@ class DataIngestion:
             train_set,test_set = train_test_split(df,
                                                 test_size=0.3,
                                                 random_state=42)
+            logging.info(f"training shape:- {train_set}")
+            logging.info(f"test shape:- {test_set}")
             
             train_set.to_csv(self.file_station_config.training_file,
                                                 index=False,
