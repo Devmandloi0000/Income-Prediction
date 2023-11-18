@@ -114,9 +114,11 @@ If you want to read you can visit this link
 
 ## Appendix
 
-> Link for App Documentation :
+> Link for App Documentation :- https://github.com/Devmandloi0000/Income-Prediction
 
 > Link for Youtube video for description of the project :- 
+
+> Deployment link of the app :- 
 
 
 

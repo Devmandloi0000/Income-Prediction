@@ -37,3 +37,10 @@ age,workclass,education_num,occupation,race,sex,capital_gain,capital_loss,hours_
 25.0,Self-emp-inc,10.0,Tech-support,White,Male,2400.0,0.0,22.0,Ireland
 25.0,State-gov,10.0,Adm-clerical,White,Male,12000.0,0.0,20.0,United-States
 25.0,State-gov,1.0,Adm-clerical,White,Male,12000.0,0.0,22.0,United-States
+25.0,Private,10.0,Prof-specialty,Black,Male,0.0,0.0,10.0,United-States
+36.0,Private,5.0,Prof-specialty,Amer-Indian-Eskimo,Male,15000.0,0.0,40.0,India
+45.0,Federal-gov,10.0,Armed-Forces,Amer-Indian-Eskimo,Male,5000.0,2400.0,42.0,India
+25.0,Federal-gov,15.0,Prof-specialty,White,Male,2400.0,0.0,40.0,Peru
+25.0,Federal-gov,15.0,Prof-specialty,White,Female,0.0,0.0,10.0,Honduras
+80.0,Private,10.0,Other-service,Asian-Pac-Islander,Male,0.0,0.0,35.0,India
+25.0,Federal-gov,10.0,Prof-specialty,Amer-Indian-Eskimo,Male,12000.0,0.0,22.0,United-States
