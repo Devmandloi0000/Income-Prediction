@@ -118,7 +118,8 @@ If you want to read you can visit this link
 
 > Link for Youtube video for description of the project :- 
 
-> Deployment link of the app :- 
+> Deployment link of the app :- https://cs7mymkatp.us-east-1.awsapprunner.com 
+
 
 
 
