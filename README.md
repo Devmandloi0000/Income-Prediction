@@ -112,13 +112,21 @@ If you want to read you can visit this link
 > Amazon AWS    :- https://aws.amazon.com/console/
 
 
+https://github.com/Devmandloi0000/Income-Prediction/assets/125810748/79281ca6-e361-4f46-84aa-0d2bac0f3127
+
 ## Appendix
 
 > Link for App Documentation :- https://github.com/Devmandloi0000/Income-Prediction
 
-> Link for Youtube video for description of the project :- 
+> Link for Youtube video for description of the project :-  https://www.youtube.com/watch?v=o0Q_rjrVFbA&t=212s
 
-> Deployment link of the app :- https://cs7mymkatp.us-east-1.awsapprunner.com 
+> Deployment link of the app :- https://cs7mymkatp.us-east-1.awsapprunner.com
+
+
+
+
+
+
 
 
 
